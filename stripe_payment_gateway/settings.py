@@ -39,6 +39,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
 ]
 
 ROOT_URLCONF = 'stripe_payment_gateway.urls'
@@ -115,3 +116,14 @@ MEDIA_ROOT = BASE_DIR / 'product'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ALLOWED_ORIGINS = [
+    
+    "http://localhost:8000",
+    "http://localhost:5173"
+]
+STRIPE_SECRET_KEY="sk_test_51OnA6YH5O3s0ZRJUy2E80C4HaNTD8oyagEGK48I1k4bAZD8Ip62fe0uWSFeEQzF8g73wgnWJv45DrAo4wDBtYzlM00Rt178eRv"
+
+STRIPE_PUBLIC_KEY="pk_test_51OnA6YH5O3s0ZRJUpjjWkVMuyra3aOVqExrLhmdRhjPt68ugkf3ORoo2bCbuAf53xUKTmZASyuDX4unRdDX7Gg3500nFoe3BCM"
+
+SITE_URL='http://localhost:5173/'
